@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+  "name": "attendance-record-checker",
+  "version": "1.0",
+  "description": "This extension checks the attendance record.",
+  "browser_action": {
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "activeTab"
+  ],
+  "content_scripts": [
+      {
+        "matches": ["https://hm.obc.jp/*/*/referencetimecard/"],
+        "js": ["contentScript.js"]
+      }
+  ]
+}
